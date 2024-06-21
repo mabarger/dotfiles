@@ -1,0 +1,25 @@
+# Default stuff
+set confirm off
+set verbose off
+set output-radix 0x10
+set input-radix 0x10
+set height 0
+set width 0
+
+# Nice prompt
+set prompt \033[31mrat > \033[0m
+
+# Layout
+tui new-layout bama asm 1 {-horizontal cmd 3 regs 1} 2
+layout bama
+focus cmd
+
+# History
+set history save on
+set history filename ~/.cache/.gdb_history
+
+# Next hook
+define hook-next
+  shell clear
+    refresh
+    end
