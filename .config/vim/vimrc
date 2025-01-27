@@ -1,0 +1,28 @@
+" Change viminfo path
+set viminfo+=n~/.config/vim/viminfo
+
+" Fix middle button pasting
+set t_BE=
+
+" Enable syntax highlighting
+syntax on
+
+" Highlight search results
+set hls
+
+" Autoindent
+set ai
+
+" Relative line numbers
+set number relativenumber
+
+" Tabstop
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
+" Remember last edit position
+autocmd BufReadPost *
+     \ if line("'\"") > 0 && line("'\"") <= line("$") |
+     \   exe "normal! g`\"" |
+     \ endif
